@@ -15,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonGuess;
     private Button buttonReset;
 
-    int acakAngka = initRandomNumber();
     int min = 1;
     int max = 100;
+    int acakAngka = initRandomNumber();
 
 
     @Override
@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Tebakan anda lebih dari maximal", Toast.LENGTH_SHORT).show();
             } else if (cekAngka < min) {
                 Toast.makeText(this, "Tebakan anda kurang dari minimal", Toast.LENGTH_SHORT).show();
-            } else if (cekAngka > initRandomNumber()) {
+            } else if (cekAngka > acakAngka) {
                 Toast.makeText(this, "Tebakan anda terlalu besar!", Toast.LENGTH_SHORT).show();
-            } else if (cekAngka < initRandomNumber()) {
+            } else if (cekAngka < acakAngka) {
                 Toast.makeText(this, "Tebakan anda terlalu kecil!", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Tebakan anda benar!", Toast.LENGTH_SHORT).show();
