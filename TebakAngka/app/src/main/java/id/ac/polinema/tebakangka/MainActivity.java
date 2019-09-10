@@ -40,18 +40,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void handleGuess(View view) {
         // TODO: Tambahkan logika untuk melakukan pengecekan angka
-        if (inputNumber.getText().toString().equals("")) {
-            Toast.makeText(this, "isi angka yang akan ditebak", Toast.LENGTH_SHORT).show();
-        } else {
-            int cekAngka = Integer.parseInt(inputNumber.getText().toString());
+        if (inputNumber.getText().toString().equals("")){
+        }
+        else {
+            int tebakAngka = Integer.parseInt(inputNumber.getText().toString());
 
-            if (cekAngka > max) {
+            if (tebakAngka > max) {
                 Toast.makeText(this, "Tebakan anda lebih dari maximal", Toast.LENGTH_SHORT).show();
-            } else if (cekAngka < min) {
+            } else if (tebakAngka < min) {
                 Toast.makeText(this, "Tebakan anda kurang dari minimal", Toast.LENGTH_SHORT).show();
-            } else if (cekAngka > acakAngka) {
+            } else if (tebakAngka > acakAngka) {
                 Toast.makeText(this, "Tebakan anda terlalu besar!", Toast.LENGTH_SHORT).show();
-            } else if (cekAngka < acakAngka) {
+            } else if (tebakAngka < acakAngka) {
                 Toast.makeText(this, "Tebakan anda terlalu kecil!", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Tebakan anda benar!", Toast.LENGTH_SHORT).show();
